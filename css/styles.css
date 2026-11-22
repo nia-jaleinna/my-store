@@ -1,3 +1,7 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
 @font-face {
     font-family: 'Batangas';
     src: url('../font/batangas-bold-700.otf');
@@ -8,21 +12,60 @@
     src: url('../font/LibreBaskerville-VariableFont_wght.ttf');
 }
 
-.nav-bgcolor{
-    background-color: #ECC471
+/* NAVIGATION BAR */
+.nav-bgcolor {
+    background-color: #ecc471;
 }
 
-.header-font {
-    font-family: 'Batangas';
-    color: #3A3126;
+nav.navbar {
+    background-color: #ecc471;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 12px;
+    border: 1px solid #d0b16c;
+    width: 100%;
 }
 
+/* KALAPATEE BRAND */
+nav.navbar .navbar-brand {
+    font-family: 'LibreBaskerville', serif !important;
+    font-size: 18px !important;
+    font-weight: normal !important;
+    line-height: normal !important;
+    color: #292929 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* NAVIGATION LINKS */
+nav.navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+nav.navbar .nav-link {
+    font-family: 'LibreBaskerville', serif !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #292929 !important;
+    text-decoration: none;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY FONT */
 .body-font {
-    font-family:'LibreBaskerville';
+    font-family: 'LibreBaskerville';
     color: #3A3126;
     line-height: 2;
 }
-
 .footer-font {
     font-family:'LibreBaskerville';
     color: #F9F5F0;
@@ -273,7 +316,6 @@ h5 {
   line-height: 1.4;
 }
 
-
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 767px) {
 
@@ -292,7 +334,6 @@ h5 {
   .product-info p {
     font-size: 0.8rem;
   }
-
 }
 
 /* FOOTER */
@@ -351,7 +392,8 @@ h5 {
   color: #3A3126;
 }
 
-/* MOBILE RESPONSIVENESS SETTINGS */
+
+/* MOBILE RESPONSIVENESS */
 
 @media (max-width: 576px) {
 
@@ -370,54 +412,15 @@ h5 {
   .footer-copyright {
     margin: 8px 0 0;
   }
-
 }
 
-
-/* PRODUCT NAME AND PRICE */
-.product-title-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-}
-
-.product-title-row h5 {
-  font-family: 'Batangas';
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.product-info .product-title-row .product-price {
-  font-family: 'Batangas';
-  font-size: 1.2rem !important;
-  white-space: nowrap;
-}
-
-/* PRODUCT DESCRIPTION */
-.product-info p {
-  font-family: 'LibreBaskerville';
-  font-size: 0.7rem;
-  margin-top: 6px;
-  line-height: 1.4;
-}
-
-/* ORDER BUTTON */
-.order-button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 18px;
-    background-color: #A9C980;
-    color: #3A3126;
-    border: 1px solid #8DAD6B;
-    border-radius: 8px;
-    font-family: 'Batangas', serif;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.order-button:hover {
-    background-color: #96B96D;
+/* TEMPORARY NAVBAR BRAND FIX */
+nav.navbar a.navbar-brand {
+    font-family: 'LibreBaskerville', serif !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    line-height: normal !important;
+    display: inline-block !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
