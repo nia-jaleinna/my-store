@@ -1,75 +1,48 @@
 
-// Select the contact form and its elements
-const contactForm = document.querySelector("#contactForm");
-const formStatus = document.querySelector("#formStatus");
+document.addEventListener("DOMContentLoaded", function () {
 
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
 
-// Add an event listener when the form is submitted
-contactForm.addEventListener("submit", function(event) {
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    // Prevent the page from refreshing
-    event.preventDefault();
+        // Get the values entered by the visitor
+        const fullname = document.getElementById("fullname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const topic = document.getElementById("topic").value.trim();
+        const message = document.getElementById("message").value.trim();
 
+        // Check that all fields are filled in
+        if (!fullname || !email || !topic || !message) {
+            formStatus.textContent = "Please complete all fields.";
+            return;
+        }
 
-    // Get the values entered by the user
-    const name = document.querySelector("#fullname").value.trim();
+        // Email recipient
+        const recipient = "hello@examplewebsite142.com";
 
-    const email = document.querySelector("#email").value.trim();
+        // Email subject
+        const subject = "Contact Us - " + topic;
 
-    const topic = document.querySelector("#topic").value;
+        // Email message
+        const body =
+            "Name: " + fullname + "\n" +
+            "Email: " + email + "\n" +
+            "Topic: " + topic + "\n\n" +
+            "Message:\n" + message;
 
-    const message = document.querySelector("#message").value.trim();
+        // Create the mailto link
+        const mailtoLink =
+            "mailto:" + recipient +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
 
-
-    // Check if the required fields are valid
-    if (!contactForm.checkValidity() || !name || !message) {
-
-        contactForm.reportValidity();
+        // Open the visitor's default email application
+        window.location.href = mailtoLink;
 
         formStatus.textContent =
-            "Please complete all required fields.";
-
-        return;
-    }
-
-
-    // Create the email subject
-    const subject = encodeURIComponent(
-        "KalapaTEE - " + topic
-    );
-
-
-    // Create the email message
-    const body = encodeURIComponent(
-
-        "Name: " + name + "\n" +
-
-        "Email: " + email + "\n" +
-
-        "Topic: " + topic + "\n\n" +
-
-        "Message:\n" + message
-
-    );
-
-
-    // Set the recipient's email address
-    const recipient = "orders@examplewebsite142.com";
-
-
-    // Build the mailto link
-    const mailtoLink =
-        "mailto:" + recipient +
-        "?subject=" + subject +
-        "&body=" + body;
-
-
-    // Display a response on the webpage
-    formStatus.textContent =
-        "Your email application will open with your message ready to send.";
-
-
-    // Open the user's email application
-    window.location.href = mailtoLink;
+            "Your email app should open with your message ready to send.";
+    });
 
 });
