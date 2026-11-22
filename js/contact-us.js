@@ -2,47 +2,50 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const contactForm = document.getElementById("contactForm");
-    const formStatus = document.getElementById("formStatus");
+
+    if (!contactForm) {
+        return;
+    }
 
     contactForm.addEventListener("submit", function (event) {
+
         event.preventDefault();
 
-        // Get the values entered by the visitor
-        const fullname = document.getElementById("fullname").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const topic = document.getElementById("topic").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        // Check that all fields are filled in
-        if (!fullname || !email || !topic || !message) {
-            formStatus.textContent = "Please complete all fields.";
+        // Check required fields
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
             return;
         }
 
-        // Email recipient
-        const recipient = "hello@examplewebsite142.com";
+        // Get visitor information
+        const name = document.getElementById("fullname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const topic = document.getElementById("topic").value;
+        const message = document.getElementById("message").value.trim();
 
-        // Email subject
-        const subject = "Contact Us - " + topic;
+        // Prepare email subject
+        const subject = encodeURIComponent("KalapaTEE - " + topic);
 
-        // Email message
-        const body =
-            "Name: " + fullname + "\n" +
+        // Prepare email body
+        const body = encodeURIComponent(
+            "Name: " + name + "\n" +
             "Email: " + email + "\n" +
             "Topic: " + topic + "\n\n" +
-            "Message:\n" + message;
+            "Message:\n" + message
+        );
 
-        // Create the mailto link
+        // Open visitor's default email application
         const mailtoLink =
-            "mailto:" + recipient +
-            "?subject=" + encodeURIComponent(subject) +
-            "&body=" + encodeURIComponent(body);
+            "mailto:?subject=" + subject +
+            "&body=" + body;
 
-        // Open the visitor's default email application
+        // Redirect to email application
         window.location.href = mailtoLink;
 
-        formStatus.textContent =
-            "Your email app should open with your message ready to send.";
+        // Display status
+        document.getElementById("formStatus").textContent =
+            "Opening your email application...";
+
     });
 
 });
