@@ -9,7 +9,7 @@
 }
 
 .nav-bgcolor{
-    background-color: #3A3126
+    background-color: #ECC471
 }
 
 .header-font {
@@ -351,7 +351,7 @@ h5 {
   color: #3A3126;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* MOBILE RESPONSIVENESS SETTINGS */
 
 @media (max-width: 576px) {
 
@@ -371,4 +371,53 @@ h5 {
     margin: 8px 0 0;
   }
 
+}
+
+
+/* PRODUCT NAME AND PRICE */
+.product-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-title-row h5 {
+  font-family: 'Batangas';
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.product-info .product-title-row .product-price {
+  font-family: 'Batangas';
+  font-size: 1.2rem !important;
+  white-space: nowrap;
+}
+
+/* PRODUCT DESCRIPTION */
+.product-info p {
+  font-family: 'LibreBaskerville';
+  font-size: 0.7rem;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* ORDER BUTTON */
+.order-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 18px;
+    background-color: #A9C980;
+    color: #3A3126;
+    border: 1px solid #8DAD6B;
+    border-radius: 8px;
+    font-family: 'Batangas', serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #96B96D;
 }

@@ -6,14 +6,16 @@
   <title>KalapaTEE</title>
     
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <nav class="navbar md:navbar-expand bg-1 border-bottom">
 
-    <div class="container">
+<!-- Navigation -->
+  <nav class="navbar md:navbar-expand nav-bgcolor border-bottom">
 
-        <a class="navbar-brand" href="index.html">KalapaTEE</a>
+    <div class="container body-font">
+
+        <a class="bg navbar-brand" href="index.html">KalapaTEE</a>
 
         <button class="btn-icon navbar-toggler" type="button"
             data-bs-toggle="drawer" data-bs-target="#mainNav"
@@ -46,7 +48,130 @@
   </div>
   </nav>
 
-  <h1>Shop Catalog</h1>
+
+<!-- SHOPPING CATALOG -->
+<main class="section-wrapper catalog-layout">
+
+    <h1 class="catalog-heading header-font">Shop Catalog</h1>
+
+    <p class="catalog-description body-font">
+        Explore our KalapaTEE collection and find your everyday favorite.
+    </p>
+
+    <!-- PRODUCT 1 -->
+    <div class="product-1">
+        <div class="product-card">
+
+            <img src="images/DontBeLateTee.png"
+                 alt="Don't Be Late Tee">
+
+            <div class="product-info">
+                <div class="product-title-row">
+                    <h5 class="header-font">Don't Be Late Tee</h5>
+                    <span class="product-price header-font">₱499</span>
+                </div>
+
+                <p class="body-font">
+                    A simple reminder to show up, get moving, and make the most of the day.
+                </p>
+
+                <button type="button" class="order-button">
+    ORDER
+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product-2">
+        <div class="product-card">
+
+            <img src="images/EverydayComfortTee.png"
+                 alt="Everyday Comfort Tee">
+
+            <div class="product-info">
+                <div class="product-title-row">
+                    <h5 class="header-font">Everyday Comfort Tee</h5>
+                    <span class="product-price header-font">₱499</span>
+                </div>
+
+                <p class="body-font">
+                    A plain, comfortable tee designed for everyday wear.
+                </p>
+
+                <button type="button" class="order-button">
+    ORDER
+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="product-3">
+        <div class="product-card">
+
+            <img src="images/DoGoodWorkTee.png"
+                 alt="Do Good Work Tee">
+
+            <div class="product-info">
+                <div class="product-title-row">
+                    <h5 class="header-font">Do Good Work Tee</h5>
+                    <span class="product-price header-font">₱499</span>
+                </div>
+
+                <p class="body-font">
+                    A simple statement for people who believe good work speaks for itself.
+                </p>
+
+                <button type="button" class="order-button">
+    ORDER
+</button>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
   <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+</body>
+</html>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+
+    <div class="container">
+        <div class="footer-content">
+
+            <!-- Logo and Copyright -->
+            <div class="footer-brand">
+
+                <img src="./logo-img/Primary (White).png"
+                    alt="KalapaTEE Logo"
+                    class="footer-logo">
+
+                <p class="footer-copyright text-s footer-font">
+                    All Rights Reserved
+                </p>
+
+            </div>
+
+            <!-- Privacy and Terms Button -->
+            <div class="footer-links">
+                <a href="privacy.html"
+                    class="footer-button header-font">
+                    Privacy and Terms
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
 </body>
 </html>

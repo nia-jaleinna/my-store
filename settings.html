@@ -9,13 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="settings.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/settings.css">
     
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
 
 </head>
 <body>
-  <nav class="navbar md:navbar-expand bg-1 border-bottom">
+  <nav class="navbar md:navbar-expand nav-bgcolor border-bottom">
 
     <div class="container">
 
@@ -125,33 +126,39 @@
 
     </section>
 
-    <!-- The second rectangle -->
-    <section class="media-panel">
 
-        <div class="setting-row">
+<!-- The second rectangle -->
+<section class="media-panel">
 
-            <div class="setting-description">
-                <h3>Website Media</h3>
-                <p>This is where you change the media shown in the website. Changing the option may improve loading times.</p>
+    <div class="setting-row">
+
+        <div class="setting-description">
+            <h3>Website Media</h3>
+            <p>This is where you change the media shown in the website. Changing the option may improve loading times.</p>
+        </div>
+
+        <div class="media-control">
+            <div class="custom-select">
+
+                <select id="mediaSelect">
+                    <option>Allow all media</option>
+                    <option>No Videos</option>
+                    <option>Only Images</option>
+                </select>
+
+                <img
+                    src="images/dropdown-icon.png"
+                    alt=""
+                    class="dropdown-icon"
+                >
+
             </div>
-
-<div class="media-control">
-    <div class="custom-select">
-
-        <select id="mediaSelect">
-            <option>Allow all media</option>
-            <option>No Videos</option>
-            <option>Only Images</option>
-        </select>
-
-        <img
-            src="images/dropdown-icon.png"
-            alt=""
-            class="dropdown-icon"
-        >
+        </div>
 
     </div>
-</div>
+
+</section>
+
 
             </div>
 

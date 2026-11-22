@@ -244,4 +244,66 @@ hr {
     padding: 0;
 }
 
+.terms-section {
+    margin-bottom: 30px;
+}
 
+.terms-section h3 {
+    font-family: 'Batangas', serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.terms-section p {
+    font-family: 'LibreBaskerville', serif;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.terms-section ol {
+    font-family: 'LibreBaskerville', serif;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 2;
+    padding-left: 45px;
+    margin-bottom: 18px;
+}
+
+.privacy-main {
+    padding: 35px 60px;
+}
+
+.privacy-main h1 {
+    margin-bottom: 25px;
+}
+
+.privacy-main h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.privacy-main p,
+.privacy-main ol {
+    line-height: 1.8;
+}
+
+@media screen and (max-width: 768px) {
+    .privacy-main {
+        padding: 25px 20px;
+    }
+}
+
+.privacy-main {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .privacy-main {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}

@@ -1,0 +1,227 @@
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Batangas';
+    src: url('./font/batangas-bold-700.otf');
+}
+
+@font-face {
+    font-family: 'LibreBaskerville';
+    src: url('./font/LibreBaskerville-VariableFont_wght.ttf');
+}
+
+
+body {
+    margin: 0;
+    background-color: #f8f5f0;
+    font-family: 'Batangas';
+    color: #333;
+}
+
+/* KALAPATEE BRAND STORY */
+.k-brand-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    padding: 20px 20px 20px;
+    align-items: auto;
+    margin: 0 20px 18px;
+    border: 1px solid #b5b5b5;
+    border-radius: 14px;
+}
+
+.kb-image {
+    height: 150px;
+}
+
+.kb-image img {
+    width: 100%;
+    height: 200%;
+    object-fit: cover;
+    border: 6px solid #8db17c;
+    border-radius: 25px;
+}
+
+.kb-text {
+    text-align: center;
+}
+
+.kb-text h1 {
+    font-size: 64px;
+    margin: 5px 0 10px;
+    font-weight: 900;
+}
+
+.kb-text p {
+    font-family: 'LibreBaskerville';
+    font-size: 16px;
+    text-align: justify;
+    margin: 0;
+}
+
+/* KALAPATEE STORY SECTION */
+.ks-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 0 20px 18px;
+    padding: 1px;
+    border: 1px solid #b5b5b5;
+    border-radius: 14px;
+    align-items: stretch;
+}
+
+.ks-description p {
+    font-family: 'LibreBaskerville';
+    font-size: 16px;
+    text-align: justify;
+    margin: 18px 20px 18px;}
+
+.ks-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* MISSION & VISION */
+.mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 0 20px 18px;
+}
+
+.box {
+    background-color: #efc66f;
+    border: 1px solid #b5a06e;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.box h2 {
+    font-size: 64px;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 0 8px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #c6a65b;
+}
+
+.box p {
+    font-family: 'LibreBaskerville';
+    font-size: 16px;
+    text-align: justify;
+    margin: 20px;
+}
+
+/* ABOUT THE TEAM */
+.about-section {
+    margin: 0 12px 20px;
+}
+
+.about-title {
+    font-size: 64px;
+    font-weight: 900; 
+    margin: 0 0 10px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    border: 1px solid #b5b5b5;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-description p {
+    font-family: 'LibreBaskerville';
+    font-size: 16px;
+    text-align: justify;
+    margin: 0;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #292929;
+    color: white;
+    display: flex;
+    font-family: 'LibreBaskerville';
+    font-size: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.footer-logo p {
+    font-size: 8px;
+    margin: 5px 0 0;
+    text-align: center;
+}
+
+.footer-button {
+    text-decoration: none;
+    color: #292929;
+    background-color: #efc66f;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family:'Batangas';
+    font-size: 16px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 700px) {
+
+    .k-brand-story {
+        grid-template-columns: 1fr;
+    }
+
+    .ks-image {
+        height: 200px;
+    }
+
+    .ks-details {
+        grid-template-columns: 1fr;
+    }
+
+    .ks-gallery {
+        height: 150px;
+    }
+
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        max-height: 250px;
+    }
+
+    .footer {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+

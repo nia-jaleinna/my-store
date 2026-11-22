@@ -4,12 +4,12 @@
 
 @font-face {
     font-family: 'Beach Resort';
-    src: url('fonts/BeachResort.ttf') format('truetype');
+    src: url('../font/BeachResort.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Batangas';
-    src: url('fonts/Batangas.otf') format('truetype');
+    src: url('../font/Batangas.otf') format('truetype');
 }
 
 /* LOGO FONT */
@@ -291,4 +291,30 @@ body {
     transform: translateY(-50%);
     object-fit: contain;
     pointer-events: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+
+    .settings-title {
+        margin-left: 10px;
+        font-size: 28px;
+    }
+
+    .settings-panel,
+    .media-panel {
+        padding: 20px;
+    }
+
+    .setting-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .font-size-control,
+    .media-control {
+        width: 100%;
+    }
+
 }
