@@ -7,6 +7,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
 @font-face {
     font-family: 'Batangas';
     src: url('../font/batangas-bold-700.otf');
@@ -26,18 +32,24 @@
 }
 
 body {
-    margin: 0;
-    background-color: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--green);
     color: var(--dark);
     font-family: 'Delibri', serif;
 }
 
+main {
+    flex: 1;
+    width: 100%;
+}
+
 
 /* =================================
-   FONT STYLING
+   FONTS
 ================================= */
 
-/* TITLES AND HEADINGS */
 h1, h2, h3, h4, h5, h6,
 .header-font,
 .navbar-brand,
@@ -46,11 +58,7 @@ h1, h2, h3, h4, h5, h6,
     font-family: 'Batangas', serif;
 }
 
-/* BODY TEXT */
-p,
-span,
-a,
-.body-font {
+p, span, a, .body-font {
     font-family: 'Delibri', serif;
 }
 
@@ -62,13 +70,13 @@ a,
 .navbar-bgcolor {
     background-color: var(--yellow);
     border-bottom: 1px solid var(--dark);
-    padding: 10px 0;
+    padding: 12px 0;
+    width: 100%;
 }
 
 .navbar-brand {
     font-size: 23px;
     color: var(--dark);
-    text-decoration: none;
 }
 
 .navbar-brand:hover {
@@ -104,13 +112,16 @@ a,
 
 .favorites-section {
     background-color: var(--green);
-    padding: 20px 0 6px;
-    min-height: 420px;
+    width: 100%;
+    min-height: 100%;
+    padding: 40px 0 50px;
 }
 
 .favorites-wrapper {
-    max-width: 1100px;
-    margin: auto;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 
@@ -119,19 +130,18 @@ a,
 ================================= */
 
 .favorites-heading {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 .favorites-heading h1 {
     color: var(--dark);
-    font-size: 36px;
-    margin-bottom: 8px;
-    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
 .favorites-heading p {
     color: var(--dark);
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 0;
 }
 
@@ -142,11 +152,10 @@ a,
 
 .favorites-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-
-    padding: 15px;
-
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 25px;
     background-color: var(--cream);
     border: 1px solid var(--dark);
     border-radius: 16px;
@@ -158,12 +167,13 @@ a,
 ================================= */
 
 .product-card {
+    width: 100%;
+    min-width: 0;
     border: 1px solid var(--dark);
     border-radius: 15px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-width: 0;
 }
 
 .product-yellow {
@@ -181,8 +191,9 @@ a,
 
 .product-image {
     width: 100%;
-    height: 210px;
+    height: 350px;
     overflow: hidden;
+    background-color: var(--cream);
 }
 
 .product-image img {
@@ -198,9 +209,9 @@ a,
 ================================= */
 
 .product-info {
-    background-color: rgba(249, 245, 240, 0.92);
-    padding: 8px;
-    margin: 0 8px 8px;
+    background-color: var(--cream);
+    padding: 15px;
+    margin: 10px;
     border: 1px solid var(--brown);
     border-radius: 9px;
     flex-grow: 1;
@@ -210,44 +221,41 @@ a,
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     border-bottom: 1px solid var(--dark);
-    padding-bottom: 5px;
-    margin-bottom: 6px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .product-name {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     min-width: 0;
 }
 
 .product-name h2 {
-    font-size: 12px;
+    font-size: 16px;
     margin: 0;
     color: var(--dark);
-    white-space: nowrap;
 }
 
 .heart-icon {
-    font-size: 19px;
+    font-size: 21px;
     color: var(--dark);
-    line-height: 1;
 }
 
 .product-price {
-    font-size: 10px;
+    font-size: 14px;
     white-space: nowrap;
     color: var(--dark);
 }
 
 .product-info p {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.8;
     color: var(--dark);
     margin: 0;
-    text-align: justify;
 }
 
 
@@ -256,15 +264,18 @@ a,
 ================================= */
 
 .site-footer {
+    width: 100%;
     background-color: #303030;
     color: white;
-    padding: 18px 0;
+    padding: 20px 0;
+    margin-top: auto;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 
 .footer-logo {
@@ -287,7 +298,6 @@ a,
     border-radius: 20px;
     text-decoration: none;
     font-size: 13px;
-    transition: 0.3s;
 }
 
 .footer-button:hover {
@@ -297,7 +307,7 @@ a,
 
 
 /* =================================
-   RESPONSIVE DESIGN
+   TABLET
 ================================= */
 
 @media (max-width: 991px) {
@@ -307,63 +317,63 @@ a,
     }
 
     .favorites-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .product-name h2 {
-        font-size: 11px;
+    .product-image {
+        height: 280px;
     }
 
 }
 
 
+/* =================================
+   MOBILE
+================================= */
+
 @media (max-width: 767px) {
 
     .favorites-section {
-        padding: 25px 0;
+        padding: 30px 0;
     }
 
     .favorites-heading h1 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .favorites-container {
         grid-template-columns: 1fr;
-        gap: 15px;
+        padding: 15px;
+        gap: 18px;
     }
 
     .product-image {
-        height: 260px;
+        height: 320px;
     }
 
     .product-name h2 {
-        font-size: 14px;
-    }
-
-    .product-price {
-        font-size: 12px;
-    }
-
-    .product-info p {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .footer-content {
-        gap: 15px;
         flex-wrap: wrap;
     }
 
 }
 
 
+/* =================================
+   SMALL MOBILE
+================================= */
+
 @media (max-width: 480px) {
 
     .favorites-heading h1 {
-        font-size: 27px;
+        font-size: 28px;
     }
 
     .product-image {
-        height: 230px;
+        height: 250px;
     }
 
     .footer-logo {
