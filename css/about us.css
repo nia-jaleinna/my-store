@@ -1,4 +1,3 @@
-
 /* GENERAL */
 * {
     box-sizing: border-box;
@@ -6,14 +5,77 @@
 
 @font-face {
     font-family: 'Batangas';
-    src: url('../font/batangas-bold-700.otf');
+    src: url('font/batangas-bold-700.otf');
 }
 
 @font-face {
     font-family: 'LibreBaskerville';
-    src: url('../font/LibreBaskerville-VariableFont_wght.ttf');
+    src: url('font/LibreBaskerville-VariableFont_wght.ttf');
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f5f0;
+    font-family: 'LibreBaskerville';
+    color: #333;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background-color: #ecc471;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 12px;
+    border: 1px solid #d0b16c;
+    width: 100%;
+}
+
+.nav-logo img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #292929;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.settings {
+    font-size: 15px !important;
+}
+
+
+.header-font {
+    font-family: 'Batangas';
+    color: #3A3126;
+}
+
+.body-font {
+    font-family:'LibreBaskerville';
+    color: #3A3126;
+    line-height: 2;
+}
+
+.footer-font {
+    font-family:'LibreBaskerville';
+    color: #F9F5F0;
+    line-height: 2;
+}
 
 body {
     margin: 0;
@@ -27,20 +89,20 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
-    padding: 20px 20px 20px;
-    align-items: auto;
+    padding: 20px;
+    align-items: center;
     margin: 0 20px 18px;
     border: 1px solid #b5b5b5;
     border-radius: 14px;
 }
 
 .kb-image {
-    height: 150px;
+    height: 250px;
 }
 
 .kb-image img {
     width: 100%;
-    height: 200%;
+    height: 100%;
     object-fit: cover;
     border: 6px solid #8db17c;
     border-radius: 25px;
@@ -188,14 +250,12 @@ body {
     font-size: 16px;
 }
 
-/* RESPONSIVE DESIGN */
 @media screen and (max-width: 700px) {
-
-    .kb-brand-story {
+    .k-brand-story {
         grid-template-columns: 1fr;
     }
 
-    .ks-image {
+    .kb-image {
         height: 200px;
     }
 
