@@ -5,25 +5,25 @@
 
 @font-face {
     font-family: 'Batangas';
-    src: url('../font/batangas-bold-700.otf');
+    src: url('font/batangas-bold-700.otf');
 }
 
 @font-face {
     font-family: 'LibreBaskerville';
-    src: url('../font/LibreBaskerville-VariableFont_wght.ttf');
+    src: url('font/LibreBaskerville-VariableFont_wght.ttf');
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: #f8f5f0;
-    font-family: 'Batangas';
+    font-family: 'LibreBaskerville';
     color: #333;
 }
 
 /* NAVIGATION BAR */
 .navbar {
-    background-color: #efc66f;
+    background-color: #ecc471;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +46,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #292929;
+    color: #F4D35E;
     font-size: 10px;
     font-weight: bold;
 }
@@ -61,10 +61,10 @@ body {
 
 /* MAIN CONTENT */
 .policy-container {
-    width: 95%;
+    width: 100%;
     max-width: 1100px;
     margin: 20px auto 30px;
-    padding: 10px 0;
+    padding: 10px 40px;
 }
 
 /* MAIN TITLE */
@@ -75,24 +75,24 @@ body {
     font-weight: 900;
     margin: 5px 0 15px;
 }
+.policy-container p {
+    font-family: 'LibreBaskerville', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 0;
+}
 
 /* INTRO */
 .intro {
-    font-family: 'LibreBaskerville';
-    text-align: left;
+    font-family: 'LibreBaskerville', serif;
     text-align: justify;
     font-size: 16px;
-    line-height: 1.5;
-    max-width: 760px;
+    line-height: 1.6;
+    width: 100%;
     margin: 0 auto 20px;
-}
-p {
-    font-family: 'LibreBaskerville';
-    text-align: justify;
-    font-size: 16px;
-    width: 95%;
-    margin: 0 auto;
-    text-align: justify;
 }
 
 /* DIVIDER */
@@ -126,13 +126,25 @@ hr {
     font-size: 16px;
     font-style: italic;
     line-height: 1.8;
-    margin-left: 100px;
+    margin-left: 50px;
     padding-left: 15px;
 }
 
 /* LIST ITEMS */
 .policy-section ol li {
     margin: 2px 0;
+}
+/* ALL SUBHEADINGS */
+.policy-container h3 {
+    font-family: 'Batangas';
+    font-size: 32px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Batangas', serif;
 }
 /* FOOTER */
 .footer {
@@ -144,8 +156,8 @@ hr {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    margin-top: 30px;
 }
+
 .footer-logo img {
     width: 150px;
     max-height: 60px;
@@ -168,80 +180,40 @@ hr {
     font-family:'Batangas';
     font-size: 16px;
 }
-/* KEEP YOUR EXISTING FOOTER CSS HERE UNCHANGED */
+/* PRIVACY AND TERMS INTRO */
+.policy-intro {
+    width: 75%;
+    max-width: 900px;
+    margin: 40px auto;
+}
 
-/* RESPONSIVE DESIGN */
+.policy-intro h1 {
+    font-family: 'Batangas';
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.policy-intro p {
+    font-family: 'LibreBaskerville', serif;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    width: 100%;
+    margin: 0;
+}
+
+/* MOBILE */
 @media screen and (max-width: 700px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
+    .policy-intro {
+        width: 90%;
     }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 11px;
-    }
-
-    .policy-container {
-        width: 100%;
-        padding: 10px 15px;
-    }
-
-    .policy-container h1 {
+    .policy-intro h1 {
         font-size: 40px;
     }
 
-    .policy-section h2 {
-        font-size: 26px;
-    }
-
-    .policy-section h3 {
-        font-size: 18px;
-    }
-
-    .policy-section p {
+    .policy-intro p {
         font-size: 14px;
     }
-
-    .intro {
-        font-size: 14px;
-    }
-
-    .policy-section ol,
-    .policy-section ul {
-        font-size: 14px;
-    }
-
-    .footer {
-        gap: 10px;
-        flex-wrap: wrap;
-    }
 }
-
-/* ALL SUBHEADINGS */
-.policy-container h3 {
-    font-family: 'Batangas';
-    font-size: 32px;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
-/* ALL PARAGRAPHS */
-.policy-container p:not(.intro) {
-    font-family: 'LibreBaskerville';
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: justify;
-    width: calc(100% - 20px);
-    margin: 0;
-    padding: 0;
-}
-
-

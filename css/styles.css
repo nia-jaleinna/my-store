@@ -1,3 +1,13 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 @font-face {
     font-family: 'Batangas';
     src: url('../font/batangas-bold-700.otf');
@@ -8,21 +18,24 @@
     src: url('../font/LibreBaskerville-VariableFont_wght.ttf');
 }
 
-.nav-bgcolor{
-    background-color: #3A3126
+
+/* NAVIGATION BAR */
+.navbar {
+    background-color: #ecc471;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 12px;
+    border: 1px solid #d0b16c;
+    width: 100%;
 }
 
-.header-font {
-    font-family: 'Batangas';
-    color: #3A3126;
-}
-
+/* BODY FONT */
 .body-font {
-    font-family:'LibreBaskerville';
+    font-family: 'LibreBaskerville';
     color: #3A3126;
     line-height: 2;
 }
-
 .footer-font {
     font-family:'LibreBaskerville';
     color: #F9F5F0;
@@ -273,7 +286,6 @@ h5 {
   line-height: 1.4;
 }
 
-
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 767px) {
 
@@ -292,7 +304,6 @@ h5 {
   .product-info p {
     font-size: 0.8rem;
   }
-
 }
 
 /* FOOTER */
@@ -351,6 +362,7 @@ h5 {
   color: #3A3126;
 }
 
+
 /* MOBILE RESPONSIVENESS */
 
 @media (max-width: 576px) {
@@ -370,5 +382,15 @@ h5 {
   .footer-copyright {
     margin: 8px 0 0;
   }
+}
 
+/* TEMPORARY NAVBAR BRAND FIX */
+nav.navbar a.navbar-brand {
+    font-family: 'LibreBaskerville', serif !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    line-height: normal !important;
+    display: inline-block !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
