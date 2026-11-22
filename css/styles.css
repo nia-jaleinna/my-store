@@ -61,6 +61,12 @@ body {
 }
 
 /* BODY FONT */
+
+.header-font {
+    font-family: 'Batangas';
+    color: #3A3126;
+}
+
 .body-font {
     font-family: 'LibreBaskerville';
     color: #3A3126;
