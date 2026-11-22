@@ -1,5 +1,6 @@
 
 /* GENERAL */
+
 * {
     box-sizing: border-box;
 }
@@ -14,71 +15,83 @@
     src: url('../font/LibreBaskerville-VariableFont_wght.ttf');
 }
 
+:root {
+    --primary: #283b2b;
+    --muted: #77766f;
+    --white: #ffffff;
+    --background: #f8f5f0;
+    --gold: #efc66f;
+    --text: #333333;
+}
 
 body {
     margin: 0;
-    background-color: #f8f5f0;
-    font-family: 'Batangas';
-    color: #333;
+    background-color: var(--background);
+    font-family: 'Batangas', serif;
+    color: var(--text);
 }
-
 
 
 /* NAVIGATION */
-.navbar {
-    padding: 15px 0;
+
+.contact-navbar {
+    background-color: var(--gold) !important;
+    border-bottom: 1px solid #b8a47c;
+    min-height: 57px;
+    padding: 12px 0;
 }
 
-.bg-1 {
-    background-color: #f7f5ef;
+.contact-navbar .container {
+    max-width: 1440px;
 }
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: #283b2b;
+.contact-navbar .navbar-brand {
     font-family: 'DM Serif Text', serif;
-    font-size: 25px;
+    font-size: 16px;
+    color: #29251f;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar-logo {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
+.contact-navbar .navbar-nav {
+    gap: 20px;
 }
 
-.nav-link {
-    color: #343434 !important;
-    font-size: 13px;
-    font-weight: 500;
-    margin-left: 12px;
+.contact-navbar .nav-link {
+    font-family: 'DM Serif Text', serif;
+    font-size: 14px;
+    color: #29251f !important;
+    padding: 5px 0;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: #283b2b !important;
-    font-weight: 700;
+.contact-navbar .nav-link:hover {
+    color: #ffffff !important;
 }
 
-.navbar-toggler {
-    border: 1px solid #283b2b;
+.contact-navbar .nav-link.active {
+    font-weight: bold;
 }
 
-@media (max-width: 991px) {
-    .navbar-nav {
+.contact-navbar .navbar-toggler {
+    border: 1px solid #29251f;
+}
+
+@media (max-width: 767px) {
+
+    .contact-navbar .navbar-nav {
+        gap: 5px;
         padding-top: 15px;
     }
 
-    .nav-link {
-        margin-left: 0;
-        padding: 10px 0;
+    .contact-navbar .nav-link {
+        padding: 8px 0;
     }
 }
 
 
 /* CONTACT SECTION */
+
 .contact-section {
     padding: 90px 0;
 }
@@ -93,7 +106,8 @@ body {
 }
 
 
-/* LEFT SIDE */
+/* LEFT CONTENT */
+
 .contact-left {
     padding: 15px 0;
 }
@@ -124,6 +138,7 @@ body {
 
 
 /* CONTACT DETAILS */
+
 .contact-details h2 {
     font-family: 'DM Serif Text', serif;
     font-size: 25px;
@@ -148,6 +163,7 @@ body {
     border-radius: 50%;
     color: var(--primary);
     font-size: 19px;
+    flex-shrink: 0;
 }
 
 .detail-item small {
@@ -172,6 +188,7 @@ body {
 
 
 /* THANK YOU */
+
 .thank-you {
     margin-top: 45px;
     padding: 25px;
@@ -194,7 +211,8 @@ body {
 }
 
 
-/* RIGHT SIDE FORM */
+/* CONTACT FORM */
+
 .contact-right {
     background-color: var(--white);
     padding: 45px;
@@ -217,7 +235,8 @@ body {
 }
 
 
-/* INPUTS */
+/* FORM INPUTS */
+
 .contact-right label {
     display: block;
     color: var(--primary);
@@ -261,6 +280,7 @@ body {
 
 
 /* SUBMIT BUTTON */
+
 .submit-btn {
     width: 100%;
     padding: 15px;
@@ -284,10 +304,12 @@ body {
     margin-top: 15px;
     font-size: 12px;
     color: var(--primary);
+    line-height: 1.6;
 }
 
 
 /* BRAND SECTION */
+
 .brand-section {
     background-color: #eae4d7;
     padding: 65px 20px;
@@ -314,12 +336,14 @@ body {
     color: var(--muted);
 }
 
+
 /* FOOTER */
+
 .footer {
     background-color: #292929;
     color: white;
     display: flex;
-    font-family: 'LibreBaskerville';
+    font-family: 'LibreBaskerville', serif;
     font-size: 16px;
     justify-content: space-between;
     align-items: center;
@@ -341,49 +365,21 @@ body {
 .footer-button {
     text-decoration: none;
     color: #292929;
-    background-color: #efc66f;
+    background-color: var(--gold);
     padding: 10px 18px;
     border-radius: 20px;
     font-weight: bold;
-    font-family:'Batangas';
+    font-family: 'Batangas', serif;
     font-size: 16px;
 }
 
-@media screen and (max-width: 700px) {
-    .k-brand-story {
-        grid-template-columns: 1fr;
-    }
-
-    .kb-image {
-        height: 200px;
-    }
-
-    .ks-details {
-        grid-template-columns: 1fr;
-    }
-
-    .ks-gallery {
-        height: 150px;
-    }
-
-    .mission-vision {
-        grid-template-columns: 1fr;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-image img {
-        max-height: 250px;
-    }
-
-    .footer {
-        gap: 10px;
-        flex-wrap: wrap;
-    }
+.footer-button:hover {
+    background-color: #ffffff;
 }
+
+
 /* RESPONSIVE DESIGN */
+
 @media (max-width: 991px) {
 
     .contact-container {
@@ -392,10 +388,6 @@ body {
 
     .contact-right {
         padding: 30px;
-    }
-
-    .nav-link {
-        margin-left: 0;
     }
 }
 
@@ -418,12 +410,8 @@ body {
         padding: 30px 22px;
     }
 
-    .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-links {
+    .footer {
+        gap: 15px;
         flex-wrap: wrap;
     }
 }
@@ -441,66 +429,8 @@ body {
     .brand-section h2 {
         font-size: 32px;
     }
-}
 
-/* =================================
-   CONTACT US NAVIGATION
-   MATCH ABOUT US HEADER
-================================= */
-
-.contact-navbar {
-    background-color: #efc66f !important;
-    border-bottom: 1px solid #b8a47c;
-    min-height: 57px;
-    padding: 12px 0;
-}
-
-.contact-navbar .container {
-    max-width: 1440px;
-}
-
-.contact-navbar .navbar-brand {
-    font-family: 'DM Serif Text', serif !important;
-    font-size: 16px !important;
-    font-weight: 400 !important;
-    color: #29251f !important;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-}
-
-.contact-navbar .navbar-nav {
-    gap: 20px;
-}
-
-.contact-navbar .nav-link {
-    font-family: 'DM Serif Text', serif !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    color: #29251f !important;
-    padding: 5px 0;
-}
-
-.contact-navbar .nav-link:hover {
-    color: #ffffff !important;
-}
-
-.contact-navbar .nav-link.active {
-    color: #29251f !important;
-}
-
-.contact-navbar .navbar-toggler {
-    border: 1px solid #29251f;
-}
-
-@media (max-width: 767px) {
-
-    .contact-navbar .navbar-nav {
-        gap: 5px;
-        padding-top: 15px;
-    }
-
-    .contact-navbar .nav-link {
-        padding: 8px 0;
+    .footer-button {
+        font-size: 13px;
     }
 }
