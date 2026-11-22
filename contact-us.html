@@ -346,3 +346,49 @@
 
 </body>
 </html>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        const name = document.getElementById("fullname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const topic = document.getElementById("topic").value;
+        const message = document.getElementById("message").value.trim();
+
+        const subject = encodeURIComponent("KalapaTEE - " + topic);
+
+        const body = encodeURIComponent(
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Topic: " + topic + "\n\n" +
+            "Message:\n" + message
+        );
+
+        const mailtoLink =
+            "mailto:?subject=" + subject +
+            "&body=" + body;
+
+        // Open the visitor's email application
+        window.open(mailtoLink, "_self");
+
+        document.getElementById("formStatus").textContent =
+            "Opening your email application...";
+    });
+
+});
+</script>
+
+</body>
+</html>
