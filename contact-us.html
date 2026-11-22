@@ -26,45 +26,67 @@
 
 <body>
 
-<!-- Navigation -->
-  <nav class="navbar md:navbar-expand nav-bgcolor border-bottom">
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-md contact-navbar">
 
-    <div class="container body-font">
+    <div class="container">
 
-        <a class="bg navbar-brand" href="index.html">
-            <img src="./logo-img/Primary.png" alt="KalapaTEE" class="navbar-logo">
+        <a class="navbar-brand" href="index.html">
+            KalapaTEE
         </a>
 
-        <button class="btn-icon navbar-toggler" type="button"
-            data-bs-toggle="drawer" data-bs-target="#mainNav"
-            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
-            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            <span class="navbar-toggler-icon"></span>
+
         </button>
 
-        <dialog class="drawer drawer-end" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+        <div class="collapse navbar-collapse" id="mainNav">
 
-      <div class="drawer-header">
+            <ul class="navbar-nav ms-auto">
 
-        <h5 class="drawer-title" id="mainNavLabel">Menu</h5>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
 
-        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-us.html">About Us</a>
+                </li>
 
-      </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                </li>
 
-      <div class="drawer-body">
-        <ul class="nav navbar-nav md:ms-auto">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
-          <li class="nav-item"><a class="nav-link" href="privacy-and-terms.html">Privacy and Terms</a></li>
-          <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
-        </ul>
-      </div>
-    </dialog>
-  </div>
-  </nav>
+                <li class="nav-item">
+                    <a class="nav-link" href="favorites.html">Favorites</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="privacy-and-terms.html">
+                        Privacy and Terms
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact-us.html">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="settings.html">Settings</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
 
 
 <!-- CONTACT SECTION -->
@@ -318,4 +340,3 @@
 
 </body>
 </html>
-
