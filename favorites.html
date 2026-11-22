@@ -1,55 +1,286 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KalapaTEE</title>
-    
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KalapaTEE | Favorites</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/favorites.css">
 
 </head>
+
 <body>
-<!-- Navigation -->
-  <nav class="navbar md:navbar-expand nav-bgcolor border-bottom">
 
-    <div class="container body-font">
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-md navbar-bgcolor border-bottom">
 
-        <a class="bg navbar-brand" href="index.html">
-            <img src="./logo-img/Primary.png" alt="KalapaTEE" class="navbar-logo">
-        </a>
+        <div class="container">
 
-        <button class="btn-icon navbar-toggler" type="button"
-            data-bs-toggle="drawer" data-bs-target="#mainNav"
-            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand header-font" href="home.html">
+                KalapaTEE
+            </a>
 
-            <span class="navbar-toggler-icon" aria-hidden="true"></span>
-        </button>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
 
-        <dialog class="drawer drawer-end" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+                <span class="navbar-toggler-icon"></span>
 
-      <div class="drawer-header">
+            </button>
 
-        <h5 class="drawer-title" id="mainNavLabel">Menu</h5>
+            <div class="collapse navbar-collapse" id="mainNav">
 
-        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                <ul class="navbar-nav ms-auto">
 
-      </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
 
-      <div class="drawer-body">
-        <ul class="nav navbar-nav md:ms-auto">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
-          <li class="nav-item"><a class="nav-link" href="privacy-and-terms.html">Privacy and Terms</a></li>
-          <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
-        </ul>
-      </div>
-    </dialog>
-  </div>
-  </nav>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About</a>
+                    </li>
 
-  <h1>"About Us!</h1>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="favorites.html">Favorites</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="privacy-and-terms.html">
+                            Privacy and Terms
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="settings.html">⚙</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- FAVORITES SECTION -->
+    <main>
+
+        <section class="favorites-section">
+
+            <div class="container">
+
+                <div class="favorites-wrapper">
+
+                    <!-- HEADING -->
+                    <div class="favorites-heading">
+
+                        <h1 class="header-font">
+                            FAVORITES
+                        </h1>
+
+                        <p class="body-font">
+                            Browse all the items you've liked!
+                        </p>
+
+                    </div>
+
+
+                    <!-- FAVORITES PRODUCT CONTAINER -->
+                    <div class="favorites-container">
+
+
+                        <!-- PRODUCT 1: DO GOOD WORK TEE -->
+                        <div class="product-card product-yellow">
+
+                            <div class="product-image">
+
+                                <img src="./images/DoGoodWorkTee.png"
+                                     alt="Model wearing Do Good Work Tee">
+
+                            </div>
+
+                            <div class="product-info">
+
+                                <div class="product-title">
+
+                                    <div class="product-name">
+
+                                        <span class="heart-icon">♥</span>
+
+                                        <h2 class="header-font">
+                                            Do Good Work Tee
+                                        </h2>
+
+                                    </div>
+
+                                    <span class="product-price header-font">
+                                        Php 499
+                                    </span>
+
+                                </div>
+
+                                <p class="body-font">
+                                    A simple statement for people who believe
+                                    good work speaks for itself.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PRODUCT 2: DON'T BE LATE TEE -->
+                        <div class="product-card product-green">
+
+                            <div class="product-image">
+
+                                <img src="./images/DontBeLateTee.png"
+                                     alt="Model wearing Don't Be Late Tee">
+
+                            </div>
+
+                            <div class="product-info">
+
+                                <div class="product-title">
+
+                                    <div class="product-name">
+
+                                        <span class="heart-icon">♥</span>
+
+                                        <h2 class="header-font">
+                                            Don't Be Late Tee
+                                        </h2>
+
+                                    </div>
+
+                                    <span class="product-price header-font">
+                                        Php 499
+                                    </span>
+
+                                </div>
+
+                                <p class="body-font">
+                                    A comfortable design that feels like home.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PRODUCT 3: EVERYDAY COMFORT TEE -->
+                        <div class="product-card product-yellow">
+
+                            <div class="product-image">
+
+                                <img src="./images/EverydayComfortTee.png"
+                                     alt="Model wearing Everyday Comfort Tee">
+
+                            </div>
+
+                            <div class="product-info">
+
+                                <div class="product-title">
+
+                                    <div class="product-name">
+
+                                        <span class="heart-icon">♥</span>
+
+                                        <h2 class="header-font">
+                                            Everyday Comfort Tee
+                                        </h2>
+
+                                    </div>
+
+                                    <span class="product-price header-font">
+                                        Php 499
+                                    </span>
+
+                                </div>
+
+                                <p class="body-font">
+                                    A plain, comfortable tee designed
+                                    for everyday wear.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <!-- LOGO AND COPYRIGHT -->
+                <div class="footer-brand">
+
+                    <img src="./logo-img/Primary (White).png"
+                         alt="KalapaTEE Logo"
+                         class="footer-logo">
+
+                    <p class="footer-copyright body-font">
+                        All Rights Reserved
+                    </p>
+
+                </div>
+
+
+                <!-- PRIVACY AND TERMS -->
+                <div class="footer-links">
+
+                    <a href="privacy-and-terms.html"
+                       class="footer-button header-font">
+                        Privacy and Terms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
