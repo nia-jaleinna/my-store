@@ -414,13 +414,8 @@ h5 {
   }
 }
 
-/* TEMPORARY NAVBAR BRAND FIX */
-nav.navbar a.navbar-brand {
-    font-family: 'LibreBaskerville', serif !important;
-    font-size: 16px !important;
-    font-weight: normal !important;
-    line-height: normal !important;
-    display: inline-block !important;
-    padding: 0 !important;
-    margin: 0 !important;
+.navbar-logo {
+    width: 120px; /* Adjust icon size */
+    height: auto;
+    object-fit: contain;
 }
